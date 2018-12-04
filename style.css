@@ -430,10 +430,6 @@ a {
     margin: 10px;
   }
 
-
-
-
-
 .week .event-name,
 .week .event-date {
   display: block;
@@ -442,7 +438,6 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 /* nari css */
 
