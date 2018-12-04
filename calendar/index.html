@@ -1,306 +1,206 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="node_modules/moment/min/moment-with-locales.min.js"></script>
-  <script src="node_modules/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
-  <script src="calendar.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css">
-  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css">
-  <title>Calendar</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"> <!-- Resource style -->
+
+	<script src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"> </script>
+	<script src="main.js"></script> <!-- Resource jQuery -->
+  	
+	<title>Schedule Template | CodyHouse</title>
 </head>
 <body>
-  <script>
-    $(document).ready(function(){
-      moment.locale('en');
-      var now = moment();
+<div class="cd-schedule loading">
+	<div class="timeline">
+		<ul>
+			<li><span>09:00</span></li>
+			<li><span>09:30</span></li>
+			<li><span>10:00</span></li>
+			<li><span>10:30</span></li>
+			<li><span>11:00</span></li>
+			<li><span>11:30</span></li>
+			<li><span>12:00</span></li>
+			<li><span>12:30</span></li>
+			<li><span>13:00</span></li>
+			<li><span>13:30</span></li>
+			<li><span>14:00</span></li>
+			<li><span>14:30</span></li>
+			<li><span>15:00</span></li>
+			<li><span>15:30</span></li>
+			<li><span>16:00</span></li>
+			<li><span>16:30</span></li>
+			<li><span>17:00</span></li>
+			<li><span>17:30</span></li>
+			<li><span>18:00</span></li>
+		</ul>
+	</div> <!-- .timeline -->
 
-      /**
-       * Many events
-       */
-      var events = [
-        {
-          start: now.startOf('week').add(9, 'h').format('X'),
-          end: now.startOf('week').add(10, 'h').format('X'),
-          title: '1',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Professionnal'
-        },
-        {
-          start: now.startOf('week').add(10, 'h').format('X'),
-          end: now.startOf('week').add(11, 'h').format('X'),
-          title: '2',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Professionnal'
-        },
-        {
-          start: now.startOf('week').add(11, 'h').format('X'),
-          end: now.startOf('week').add(12, 'h').format('X'),
-          title: '3',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Personnal'
-        },
-        {
-          start: now.startOf('week').add(1, 'days').add(9, 'h').format('X'),
-          end: now.startOf('week').add(1, 'days').add(10, 'h').format('X'),
-          title: '4',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Personnal'
-        },
-        {
-          start: now.startOf('week').add(1, 'days').add(9, 'h').add(30, 'm').format('X'),
-          end: now.startOf('week').add(1, 'days').add(10, 'h').add(30, 'm').format('X'),
-          title: '5',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Arrobe'
-        },
-        {
-          start: now.startOf('week').add(1, 'days').add(11, 'h').format('X'),
-          end: now.startOf('week').add(1, 'days').add(12, 'h').format('X'),
-          title: '6',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Another category'
-        },
-        {
-          start: now.startOf('week').add(2, 'days').add(9, 'h').format('X'),
-          end: now.startOf('week').add(2, 'days').add(10, 'h').format('X'),
-          title: '7',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Personnal'
-        },
-        {
-          start: now.startOf('week').add(2, 'days').add(9, 'h').add(30, 'm').format('X'),
-          end: now.startOf('week').add(2, 'days').add(10, 'h').add(30, 'm').format('X'),
-          title: '8',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Professionnal'
-        },
-        {
-          start: now.startOf('week').add(2, 'days').add(10, 'h').format('X'),
-          end: now.startOf('week').add(2, 'days').add(11, 'h').format('X'),
-          title: '9',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Personnal'
-        },
-        {
-          start: now.startOf('week').add(3, 'days').add(9, 'h').format('X'),
-          end: now.startOf('week').add(3, 'days').add(10, 'h').format('X'),
-          title: '10',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Professionnal'
-        },
-        {
-          start: now.startOf('week').add(3, 'days').add(9, 'h').add(15, 'm').format('X'),
-          end: now.startOf('week').add(3, 'days').add(10, 'h').add(15, 'm').format('X'),
-          title: '11',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Personnal'
-        },
-        {
-          start: now.startOf('week').add(3, 'days').add(9, 'h').add(30, 'm').format('X'),
-          end: now.startOf('week').add(3, 'days').add(10, 'h').add(30, 'm').format('X'),
-          title: '12',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Anything else'
-        },
-        {
-          start: now.startOf('week').add(4, 'days').add(9, 'h').format('X'),
-          end: now.startOf('week').add(4, 'days').add(12, 'h').format('X'),
-          title: '13',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Private'
-        },
-        {
-          start: now.startOf('week').add(4, 'days').add(9, 'h').add(30, 'm').format('X'),
-          end: now.startOf('week').add(4, 'days').add(10, 'h').format('X'),
-          title: '14',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'No more creative category name'
-        },
-        {
-          start: now.startOf('week').add(4, 'days').add(11, 'h').format('X'),
-          end: now.startOf('week').add(4, 'days').add(11, 'h').add(30, 'm').format('X'),
-          title: '15',
-          content: 'Hello World! <br> <p>Foo Bar</p>',
-          category:'Professionnal'
-        },
-        {
-         start: now.startOf('week').add(5, 'days').add(10, 'h').format('X'),
-         end: now.startOf('week').add(5, 'days').add(12, 'h').format('X'),
-         title: '17',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Private'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(9, 'h').add(30, 'm').format('X'),
-         end: now.startOf('week').add(5, 'days').add(10, 'h').add(30, 'm').format('X'),
-         title: '16',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Course'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(11, 'h').add(30, 'm').format('X'),
-         end: now.startOf('week').add(5, 'days').add(12, 'h').add(30, 'm').format('X'),
-         title: '18',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'No more creative category name'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(12, 'h').format('X'),
-         end: now.startOf('week').add(5, 'days').add(13, 'h').format('X'),
-         title: '19',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Another one'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(12, 'h').add(15, 'm').format('X'),
-         end: now.startOf('week').add(5, 'days').add(13, 'h').format('X'),
-         title: '21',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'One again'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(12, 'h').add(45, 'm').format('X'),
-         end: now.startOf('week').add(5, 'days').add(13, 'h').add(45, 'm').format('X'),
-         title: '22',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Encore'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(13, 'h').add(45, 'm').format('X'),
-         end: now.startOf('week').add(5, 'days').add(14, 'h').format('X'),
-         title: '23',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Professionnal'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(12, 'h').format('X'),
-         end: now.startOf('week').add(5, 'days').add(14, 'h').add(30, 'm').format('X'),
-         title: '20',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Private'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(13, 'h').add(45, 'm').format('X'),
-         end: now.startOf('week').add(5, 'days').add(15, 'h').format('X'),
-         title: '27',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Encore'
-       },
-       {
-         start: now.startOf('week').add(5, 'days').add(14, 'h').add(30, 'm').format('X'),
-         end: now.startOf('week').add(5, 'days').add(15, 'h').format('X'),
-         title: '28',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Private'
-       },
-       {
-         start: now.startOf('week').add(6, 'days').add(9, 'h').format('X'),
-         end: now.startOf('week').add(6, 'days').add(11, 'h').format('X'),
-         title: '24',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Foo'
-       },
-       {
-         start: now.startOf('week').add(6, 'days').add(9, 'h').format('X'),
-         end: now.startOf('week').add(6, 'days').add(11, 'h').format('X'),
-         title: '25',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Bar'
-       },
-       {
-         start: now.startOf('week').add(6, 'days').add(9, 'h').format('X'),
-         end: now.startOf('week').add(6, 'days').add(11, 'h').format('X'),
-         title: '26',
-         content: 'Hello World! <br> <p>Foo Bar</p>',
-         category:'Baz'
-       },
-      ];
+	<div class="events">
+		<ul>
+			<li class="events-group">
+				<div class="top-info"><span>Monday</span></div>
 
-      /**
-       * A daynote
-       */
-      var daynotes = [
-        {
-          time: now.startOf('week').add(15, 'h').add(30, 'm').format('X'),
-          title: 'Leo\'s holiday',
-          content: 'yo',
-          category: 'holiday'
-        }
-      ];
+				<ul>
+					<li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">Abs Circuit</em>
+						</a>
+					</li>
 
-      /**
-       * Init the calendar
-       */
-      var calendar = $('#calendar').Calendar({
-        locale: 'en',
-        weekday: {
-          timeline: {
-            intervalMinutes: 30,
-            fromHour: 9
-          }
-        },
-        events: events,
-        daynotes: daynotes
-      }).init();
+					<li class="single-event" data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">Rowing Workout</em>
+						</a>
+					</li>
 
-      /**
-       * Listening for events
-       */
+					<li class="single-event" data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">Yoga Level 1</em>
+						</a>
+					</li>
+				</ul>
+			</li>
 
-      $('#calendar').on('Calendar.init', function(event, instance, before, current, after){
-        console.log('event : Calendar.init');
-        console.log(instance);
-        console.log(before);
-        console.log(current);
-        console.log(after);
-      });
-      $('#calendar').on('Calendar.daynote-mouseenter', function(event, instance, elem){
-        console.log('event : Calendar.daynote-mouseenter');
-        console.log(instance);
-        console.log(elem);
-      });
-      $('#calendar').on('Calendar.daynote-mouseleave', function(event, instance, elem){
-        console.log('event : Calendar.daynote-mouseleave');
-        console.log(instance);
-        console.log(elem);
-      });
-      $('#calendar').on('Calendar.event-mouseenter', function(event, instance, elem){
-        console.log('event : Calendar.event-mouseenter');
-        console.log(instance);
-        console.log(elem);
-      });
-      $('#calendar').on('Calendar.event-mouseleave', function(event, instance, elem){
-        console.log('event : Calendar.event-mouseleave');
-        console.log(instance);
-        console.log(elem);
-      });
-      $('#calendar').on('Calendar.daynote-click', function(event, instance, elem, evt){
-        console.log('event : Calendar.daynote-click');
-        console.log(instance);
-        console.log(elem);
-        console.log(evt);
-      });
-      $('#calendar').on('Calendar.event-click', function(event, instance, elem, evt){
-        console.log('event : Calendar.event-click');
-        console.log(instance);
-        console.log(elem);
-        console.log(evt);
-      });
-    });
-  </script>
-  <div class="container-fluid px-4">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="calendar"></div>
-      </div>
-    </div>
-  </div>
+			<li class="events-group">
+				<div class="top-info"><span>Tuesday</span></div>
+
+				<ul>
+					<li class="single-event" data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">Rowing Workout</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="11:30" data-end="13:00"  data-content="event-restorative-yoga" data-event="event-4">
+						<a href="#0">
+							<em class="event-name">Restorative Yoga</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">Abs Circuit</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">Yoga Level 1</em>
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="events-group">
+				<div class="top-info"><span>Wednesday</span></div>
+
+				<ul>
+					<li class="single-event" data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4">
+						<a href="#0">
+							<em class="event-name">Restorative Yoga</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">Yoga Level 1</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="12:00" data-end="13:45"  data-content="event-rowing-workout" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">Rowing Workout</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">Yoga Level 1</em>
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="events-group">
+				<div class="top-info"><span>Thursday</span></div>
+
+				<ul>
+					<li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">Abs Circuit</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4">
+						<a href="#0">
+							<em class="event-name">Restorative Yoga</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">Abs Circuit</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="17:00" data-end="18:30"  data-content="event-rowing-workout" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">Rowing Workout</em>
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li class="events-group">
+				<div class="top-info"><span>Friday</span></div>
+
+				<ul>
+					<li class="single-event" data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">Rowing Workout</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">Abs Circuit</em>
+						</a>
+					</li>
+
+					<li class="single-event" data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">Yoga Level 1</em>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="event-modal">
+		<header class="header">
+			<div class="content">
+				<span class="event-date"></span>
+				<h3 class="event-name"></h3>
+			</div>
+
+			<div class="header-bg"></div>
+		</header>
+
+		<div class="body">
+			<div class="event-info"></div>
+			<div class="body-bg"></div>
+		</div>
+
+		<a href="#0" class="close">Close</a>
+	</div>
+
+	<div class="cover-layer"></div>
+</div> <!-- .cd-schedule -->
+
+
 </body>
 </html>
