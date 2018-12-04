@@ -442,3 +442,11 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+/* nari css */
+
+#classrow:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
