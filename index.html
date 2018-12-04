@@ -28,7 +28,6 @@
         <li><a href="#" class="navbar-left"><img id ="logo" src="Images/logo_grey_150.png"></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span><b class="caret"></b></a>
             <ul class="dropdown-menu multi-column columns-3">
@@ -69,7 +68,24 @@
                 </div>
             </ul>
         </li>
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <div class="row">
+                  <div class="col-sm-4">
+                      <ul class="single-dropdown">
+                          <li><a href="#"><span class="glyphicon glyphicon-bell"></span>  Notifications</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-cog"></span>  Preferences</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span>  Help</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-off"></span>  Sign Out</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </ul>
+      </li>
       </ul>
     </div>
   </div>
@@ -223,9 +239,72 @@
 
 
     <div id='panels' class="col-sm-4 text-left">
-        
+      <div class="container-fluid">
+        <div class="search-box">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Search for Course</h5>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search all fields e.g. HTML">
+                    <script>
+                        $(document).ready(function () {
+                            $("#myInput").on("keyup", function () {
+                                var value = $(this).val().toLowerCase();
+                                $("#myTable tr").filter(function () {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                            });
+                        });
+                    </script>
+                </div> 
+            </div>
+        </div>
+        <div class="search-list">
+            <h3>6 Courses found for your program</h3>
+            <table class="table" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                
+                <tr>
+                    <td>Course1</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Course2</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Course3</td>
+                    <td>Programming Language</td>
+                </tr>
+                <tr>
+                    <td>Course4</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Course5</td>
+                    <td>Web Design</td>
+                </tr>
+                <tr>
+                    <td>Course6</td>
+                    <td>Programming Language</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
 
     </div>
+
+    </div>
+
   </div>
 </div>
 

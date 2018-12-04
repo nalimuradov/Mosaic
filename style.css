@@ -350,7 +350,7 @@ a {
         font-weight: 300;
     }
     .multi-column-dropdown {
-        list-style: none;
+    list-style: none;
     margin: 0px;
     padding: 0px;
     }
@@ -366,6 +366,30 @@ a {
         color: #262626;
         background-color: #999;
     }
+
+    .single-dropdown {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .single-dropdown .divider {
+      width: 200px;
+    }
+
+    .single-dropdown li a {
+      display: block;
+      clear: both;
+      width: 200px;
+      line-height: 1.428571429;
+      color: #333;
+      white-space: normal;
+  }
+    .single-dropdown li a:hover {
+        text-decoration: none;
+        color: #262626;
+        background-color: #999;
+    }
     
     @media (max-width: 767px) {
         .dropdown-menu.multi-column {
@@ -374,6 +398,32 @@ a {
 
         }
     }
+
+    /* Code for searching courses */
+
+    .search-table{
+      padding: 10%;
+      margin-top: -6%;
+  }
+  .search-box{
+      background: #c1c1c1;
+      border: 1px solid #ababab;
+      padding: 3%;
+  }
+  .search-box input:focus{
+      box-shadow:none;
+      border:2px solid #eeeeee;
+  }
+  .search-list{
+      background: #fff;
+      border: 1px solid #ababab;
+      border-top: none;
+  }
+  .search-list h3{
+      background: #eee;
+      padding: 3%;
+      margin-bottom: 0%;
+  }
 
 
 

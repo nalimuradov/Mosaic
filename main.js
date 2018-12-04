@@ -41,7 +41,6 @@ jQuery(document).ready(function($){
 		var timeArray = time.split(':');
 		return parseInt(timeArray[0]) * 60 + parseInt(timeArray[1]);
 	}
-});
 
 
 
@@ -69,4 +68,4 @@ function enroll(){
 	var course = document.getElementById('selectedCourse');
 	var thursday = document.getElementById('thursday');
 	console.log(course.value);
-}
+}	
