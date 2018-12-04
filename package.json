@@ -1,0 +1,19 @@
+{
+  "name": "mosaic",
+  "version": "1.0.0",
+  "description": "mcmaster mosaic UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalimuradov/Mosaic.git"
+  },
+  "author": "nari teo andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nalimuradov/Mosaic/issues"
+  },
+  "homepage": "https://github.com/nalimuradov/Mosaic#readme"
+}
