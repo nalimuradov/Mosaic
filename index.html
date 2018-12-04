@@ -170,35 +170,77 @@
 
 
     <div id='panels' class="col-sm-4 text-left">
-        
-
-
-
-        <div class = "panel panel-default">
-         <div class = "panel-heading">
-            <h3 class = "panel-title"><b>Course Info</b></h3>
-         </div>
-
-         
-
-
-         <div class = "panel-body">
-            <input type='text' value='SFWR 4AA4'><button>⌕</button>
-            <div class='content'> 
-              <p>shits fucked styllaz</p>
+      <div class="container-fluid">
+        <div class="search-box">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Search for Course</h5>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search all fields e.g. HTML">
+                    <script>
+                        $(document).ready(function () {
+                            $("#myInput").on("keyup", function () {
+                                var value = $(this).val().toLowerCase();
+                                $("#myTable tr").filter(function () {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                            });
+                        });
+                    </script>
+                </div> 
             </div>
-            <button>Enroll</button>
-            <button>Manage Courses</button>
-         </div>
-      </div>
+        </div>
+        <div class="search-list">
+            <h3>6 Courses found for your program</h3>
+            <table class="table" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                
+                <tr>
+                    <td>Course1</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Course2</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Course3</td>
+                    <td>Programming Language</td>
+                </tr>
+                <tr>
+                    <td>Course4</td>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Course5</td>
+                    <td>Web Design</td>
+                </tr>
+                <tr>
+                    <td>Course6</td>
+                    <td>Programming Language</td>
+                </tr>
+                </tbody>
+            </table>
 
+        </div>
 
+    </div>
 
 
 
       
+      
 
     </div>
+
   </div>
 </div>
 
