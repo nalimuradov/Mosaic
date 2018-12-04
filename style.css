@@ -350,7 +350,7 @@ a {
         font-weight: 300;
     }
     .multi-column-dropdown {
-        list-style: none;
+    list-style: none;
     margin: 0px;
     padding: 0px;
     }
@@ -362,6 +362,30 @@ a {
         white-space: normal;
     }
     .multi-column-dropdown li a:hover {
+        text-decoration: none;
+        color: #262626;
+        background-color: #999;
+    }
+
+    .single-dropdown {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .single-dropdown .divider {
+      width: 200px;
+    }
+
+    .single-dropdown li a {
+      display: block;
+      clear: both;
+      width: 200px;
+      line-height: 1.428571429;
+      color: #333;
+      white-space: normal;
+  }
+    .single-dropdown li a:hover {
         text-decoration: none;
         color: #262626;
         background-color: #999;
