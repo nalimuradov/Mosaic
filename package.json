@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/nalimuradov/Mosaic/issues"
   },
-  "homepage": "https://github.com/nalimuradov/Mosaic#readme"
+  "homepage": "https://github.com/nalimuradov/Mosaic#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1",
+    "bootstrap": "^4",
+    "jquery": "^3",
+    "jquery-touchswipe": "^1.6",
+    "moment": "^2.22",
+    "popper.js": "^1.14"  
+  }
 }
