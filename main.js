@@ -1,10 +1,8 @@
 jQuery(document).ready(function($){
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 	var transitionsSupported = ( $('.csstransitions').length > 0 );
-	//if browser does not support transitions - use a different event to trigger them
+
 	if( !transitionsSupported ) transitionEnd = 'noTransition';
-	
-	//should add a loding while the events are organized 
 
 	function SchedulePlan( element ) {
 		this.element = element;
@@ -30,14 +28,10 @@ jQuery(document).ready(function($){
 
 		this.animating = false;
 
-		this.initSchedule();
-	}
-
-	SchedulePlan.prototype.initSchedule = function() {
 		this.scheduleReset();
 		this.initEvents();
-	};
-
+	}
+	
 	SchedulePlan.prototype.scheduleReset = function() {
 		var mq = this.mq();
 		if( mq == 'desktop' && !this.element.hasClass('js-full') ) {

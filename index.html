@@ -7,83 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-      
-    #logo {
-        
-        height: 35px;
-    }
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
 
-    .dropdown-menu {
-	min-width: 200px;
-    }
-    .dropdown-menu.columns-2 {
-        min-width: 400px;
-    }
-    .dropdown-menu.columns-3 {
-        min-width: 600px;
-    }
-    .dropdown-menu li a {
-        padding: 5px 15px;
-        font-weight: 300;
-    }
-    .multi-column-dropdown {
-        list-style: none;
-    margin: 0px;
-    padding: 0px;
-    }
-    .multi-column-dropdown li a {
-        display: block;
-        clear: both;
-        line-height: 1.428571429;
-        color: #333;
-        white-space: normal;
-    }
-    .multi-column-dropdown li a:hover {
-        text-decoration: none;
-        color: #262626;
-        background-color: #999;
-    }
-    
-    @media (max-width: 767px) {
-        .dropdown-menu.multi-column {
-            min-width: 240px !important;
-            overflow-x: hidden;
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-        }
-    }
-  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"> </script>
+  <script src="main.js"></script>
+
 </head>
 <body>
 
@@ -151,11 +81,88 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+      <div class="cd-schedule">
+        <div class="timeline">
+          <ul>
+            <li><span>08:30</span></li>
+            <li><span>09:00</span></li>
+            <li><span>09:30</span></li>
+            <li><span>10:00</span></li>
+            <li><span>10:30</span></li>
+            <li><span>11:00</span></li>
+            <li><span>11:30</span></li>
+            <li><span>12:00</span></li>
+            <li><span>12:30</span></li>
+            <li><span>13:00</span></li>
+            <li><span>13:30</span></li>
+            <li><span>14:00</span></li>
+            <li><span>14:30</span></li>
+            <li><span>15:00</span></li>
+            <li><span>15:30</span></li>
+            <li><span>16:00</span></li>
+            <li><span>16:30</span></li>
+            <li><span>17:00</span></li>
+            <li><span>17:30</span></li>
+            <li><span>18:00</span></li>
+          </ul>
+        </div>
+
+        <div class="events">
+          <ul>
+            <li class="events-group">
+              <div class="top-info"><span>Monday</span></div>
+              <ul>
+                <li class="single-event" data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4AA4</em>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="events-group">
+              <div class="top-info"><span>Tuesday</span></div>
+            </li>
+
+            <li class="events-group">
+              <div class="top-info"><span>Wednesday</span></div>
+              <ul>
+                <li class="single-event" data-start="09:30" data-end="12:30" data-content="event-abs-circuit" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4HC3</em>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="events-group">
+              <div class="top-info"><span>Thursday</span></div>
+            </li>
+
+            <li class="events-group">
+              <div class="top-info"><span>Friday</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="event-modal">
+          <header class="header">
+            <div class="content">
+              <span class="event-date"></span>
+              <h3 class="event-name"></h3>
+            </div>
+
+            <div class="header-bg"></div>
+          </header>
+
+          <div class="body">
+            <div class="event-info"></div>
+            <div class="body-bg"></div>
+          </div>
+
+          <a href="#0" class="close">Close</a>
+        </div>
+      </div> 
     </div>
     <div class="col-sm-4 text-left"> 
             <h1>Welcome</h1>
@@ -168,6 +175,13 @@
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+
+
+<script>
+  $(function(){
+      $("#includedContent").load("calendar/index.html"); 
+    });
+</script>
 
 </body>
 </html>
