@@ -91,7 +91,7 @@ a {
     height: 50px;
   }
   .week .timeline li::after {
-    /* this is used to create the table horizontal lines */
+    /* horizontal table lines */
     content: '';
     position: absolute;
     bottom: 0;
@@ -425,7 +425,10 @@ a {
       margin-bottom: 0%;
   }
 
-
+  hr {
+    padding: 5px;
+    margin: 10px;
+  }
 
 .week .event-name,
 .week .event-date {
@@ -436,10 +439,18 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 /* nari css */
 
 #classrow:hover {
   background-color: lightgrey;
   cursor: pointer;
 }
+
+#screen4E03, #screen3Y03, #screen1Z03, #screen4AA4, #screen4HC3 {
+  display: none;
+}
+
+.course4AA4, .course3Y03, .course4E03, .course1Z03, .course4HC3 {
+  visibility: hidden;
+}
+
