@@ -42,3 +42,31 @@ jQuery(document).ready(function($){
 		return parseInt(timeArray[0]) * 60 + parseInt(timeArray[1]);
 	}
 });
+
+
+
+function run4HC3(){
+	console.log('4hc3');
+}
+
+function run4AA4(){
+	console.log('4aa4');
+}
+
+function run3Y03(){
+	console.log('3y03');
+}
+
+function run1Z03(){
+	console.log('1z03');
+}
+
+function run4E03(){
+	console.log('4e03');
+}
+
+function enroll(){
+	var course = document.getElementById('selectedCourse');
+	var thursday = document.getElementById('thursday');
+	console.log(course.value);
+}
