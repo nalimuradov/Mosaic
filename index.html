@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="Images/mcmaster.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -246,7 +247,7 @@
                     <h5>Search for Course</h5>
                 </div>
                 <div class="col-md-9">
-                    <input type="text" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search all fields e.g. HTML">
+                    <input type="text" id="myInput" class="form-control" placeholder="Search all fields e.g. HTML">
                     <script>
                         $(document).ready(function () {
                             $("#myInput").on("keyup", function () {
@@ -261,7 +262,7 @@
             </div>
         </div>
         <div class="search-list">
-            <h3>6 Courses found for your program</h3>
+            <h3>5 Courses found for your program</h3>
             <table class="table" id="myTable">
                 <thead>
                     <tr>
@@ -272,29 +273,25 @@
                 <tbody>
                     
                 
-                <tr>
-                    <td>Course1</td>
-                    <td>Web Development</td>
+                <tr id='classrow' onclick='run4AA4()'>
+                    <td>SFWR 4AA4</td>
+                    <td>Real Time Operating Systems</td>
                 </tr>
-                <tr>
-                    <td>Course2</td>
-                    <td>Web Development</td>
+                <tr id='classrow' onclick='run1Z03()'>
+                    <td>RUSS 1Z03</td>
+                    <td>Intro to Russian</td>
                 </tr>
-                <tr>
-                    <td>Course3</td>
-                    <td>Programming Language</td>
+                <tr id='classrow' onclick='run4HC3()'>
+                    <td>SFWR 4HC3</td>
+                    <td>Human Computer Interfaces</td>
                 </tr>
-                <tr>
-                    <td>Course4</td>
-                    <td>Web Development</td>
+                <tr id='classrow' onclick='run4E03()'>
+                    <td>SFWR 4E03</td>
+                    <td>Software Stats and Simulation</td>
                 </tr>
-                <tr>
-                    <td>Course5</td>
-                    <td>Web Design</td>
-                </tr>
-                <tr>
-                    <td>Course6</td>
-                    <td>Programming Language</td>
+                <tr id='classrow' onclick='run3Y03()'>
+                    <td>MATH 3Y03</td>
+                    <td>Statistics</td>
                 </tr>
                 </tbody>
             </table>

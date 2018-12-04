@@ -63,9 +63,3 @@ function run1Z03(){
 function run4E03(){
 	console.log('4e03');
 }
-
-function enroll(){
-	var course = document.getElementById('selectedCourse');
-	var thursday = document.getElementById('thursday');
-	console.log(course.value);
-}	
