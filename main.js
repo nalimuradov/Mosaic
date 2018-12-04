@@ -41,25 +41,67 @@ jQuery(document).ready(function($){
 		var timeArray = time.split(':');
 		return parseInt(timeArray[0]) * 60 + parseInt(timeArray[1]);
 	}
+
+	var screenHome = document.getElementById('screenHome');
+	var screen4E03 = document.getElementById('screen4E03');
+	var screen4HC3 = document.getElementById('screen4HC3');
+	var screen3Y03 = document.getElementById('screen3Y03');
+	var screen1Z03 = document.getElementById('screen1Z03');
+	var screen4AA4 = document.getElementById('screen4AA4');
+	console.log(screen4AA4);
+
 });
 
+var courseID = '';
 
 function run4HC3(){
-	console.log('4hc3');
+	courseID = '4HC3';
+	screenHome.style.display = 'none';
+	screen4HC3.style.display = 'unset';
 }
 
 function run4AA4(){
-	console.log('4aa4');
+	courseID = '4AA4';
+	screenHome.style.display = 'none';
+	screen4AA4.style.display = 'unset';
 }
 
 function run3Y03(){
-	console.log('3y03');
+	courseID = '3Y03';
+	screenHome.style.display = 'none';
+	screen3Y03.style.display = 'unset';
 }
 
-function run1Z03(){
-	console.log('1z03');
+function run1Z03(){	
+	courseID = '1Z03';
+	screenHome.style.display = 'none';
+	screen1Z03.style.display = 'unset';
 }
 
 function run4E03(){
-	console.log('4e03');
+	courseID = '4E03';
+	screenHome.style.display = 'none';
+	screen4E03.style.display = 'unset';
+}
+
+function cancelBtn(){
+	screenHome.style.display = 'unset';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
+}
+
+function enrollBtn(){
+	var course = document.getElementsByClassName('course' + courseID);
+	for (i = 0; i < course.length; i++){
+		course[i].style.visibility = 'visible';
+	}
+	screenHome.style.display = 'unset';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
 }

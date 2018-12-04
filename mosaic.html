@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>McMaster Mosaic</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="Images/mcmaster.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"> </script>
+  <script src="main.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#" class="navbar-left"><img id ="logo" src="Images/logo_grey_150.png"></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span><b class="caret"></b></a>
+            <ul class="dropdown-menu multi-column columns-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                            <li><a href="#">Create TimeTable</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Link TimeTable to Google</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Mac ID and Email</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Student Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                            <li><a href="#">Aid and Awards</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">HSR Bus Pass</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Regulatory Training</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Got a Question?</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="multi-column-dropdown">
+                            <li><a href="#">Academic Resources</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Career Opportunities</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Academic Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Support and Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <div class="row">
+                  <div class="col-sm-4">
+                      <ul class="single-dropdown">
+                          <li><a href="#"><span class="glyphicon glyphicon-bell"></span>  Notifications</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-cog"></span>  Preferences</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span>  Help</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-off"></span>  Sign Out</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> 
+      <div class="week">
+        <div class="timeline">
+          <ul>
+            <li><span>08:00</span></li>
+            <li><span>08:30</span></li>
+            <li><span>09:00</span></li>
+            <li><span>09:30</span></li>
+            <li><span>10:00</span></li>
+            <li><span>10:30</span></li>
+            <li><span>11:00</span></li>
+            <li><span>11:30</span></li>
+            <li><span>12:00</span></li>
+            <li><span>12:30</span></li>
+            <li><span>13:00</span></li>
+            <li><span>13:30</span></li>
+            <li><span>14:00</span></li>
+            <li><span>14:30</span></li>
+            <li><span>15:00</span></li>
+            <li><span>15:30</span></li>
+            <li><span>16:00</span></li>
+            <li><span>16:30</span></li>
+            <li><span>17:00</span></li>
+            <li><span>17:30</span></li>
+          </ul>
+        </div>
+
+        <div class="events">
+          <ul>
+            <li id='monday' class="events-group">
+              <div class="top-info"><span>Monday</span></div>
+              <ul>
+                <li class="single-event course4AA4" data-start="09:30" data-end="10:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4AA4</em>
+                  </a>
+                </li>
+                <li class="single-event course4HC3" data-start="11:30" data-end="12:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4HC3</em>
+                  </a>
+                </li>
+                <li class="single-event course3Y03" data-start="12:30" data-end="13:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">3Y03</em>
+                  </a>
+                </li>
+                 <li class="single-event course4E03" data-start="13:30" data-end="16:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4E03</em>
+                  </a>
+                </li>
+                <li class="single-event course1Z03" data-start="10:30" data-end="11:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">1Z03</em>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li id='tuesday' class="events-group">
+              <div class="top-info"><span>Tuesday</span></div>
+              <ul>
+                <li class="single-event course4AA4" data-start="09:30" data-end="10:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4AA4</em>
+                  </a>
+                </li>
+                <li class="single-event course3Y03" data-start="12:30" data-end="13:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">3Y03</em>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li id='wednesday' class="events-group">
+              <div class="top-info"><span>Wednesday</span></div>
+              <ul>
+                <li class="single-event course4E03" data-start="08:30" data-end="9:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4E03</em>
+                  </a>
+                </li>
+                <li class="single-event course1Z03" data-start="10:30" data-end="11:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">1Z03</em>
+                  </a>
+                </li>
+                <li class="single-event course4HC3" data-start="11:30" data-end="12:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4HC3</em>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+
+            <li id='thursday' class="events-group">
+              <div class="top-info"><span>Thursday</span></div>
+              <ul>
+                <li class="single-event course4AA4" data-start="09:30" data-end="10:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4AA4</em>
+                  </a>
+                </li>
+                <li class="single-event course3Y03" data-start="12:30" data-end="13:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">3Y03</em>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li id='friday' class="events-group">
+              <div class="top-info"><span>Friday</span></div>
+              <ul>
+                <li class="single-event course4E03" data-start="08:30" data-end="9:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4E03</em>
+                  </a>
+                </li>
+                <li class="single-event course1Z03" data-start="10:30" data-end="11:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">1Z03</em>
+                  </a>
+                </li>
+                <li class="single-event course4HC3" data-start="11:30" data-end="12:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4HC3</em>
+                  </a>
+                </li>
+                <li class="single-event course4HC3" data-start="12:30" data-end="14:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4HC3</em>
+                  </a>
+                </li>
+                
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div> 
+    </div>
+
+
+    <div id='panels' class="col-sm-4 text-left">
+      <div id='screenHome' class="container-fluid">
+        <div class="search-box">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Search for Course</h5>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" id="myInput" class="form-control" placeholder="Search all fields e.g. HTML">
+                    <script>
+                        $(document).ready(function () {
+                            $("#myInput").on("keyup", function () {
+                                var value = $(this).val().toLowerCase();
+                                $("#myTable tr").filter(function () {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                });
+                            });
+                        });
+                    </script>
+                </div> 
+            </div>
+        </div>
+        <div class="search-list">
+            <h3>5 Courses found for your program</h3>
+            <table class="table" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                
+                <tr id='classrow' onclick='run4AA4()'>
+                    <td>SFWR 4AA4</td>
+                    <td>Real Time Operating Systems</td>
+                </tr>
+                <tr id='classrow' onclick='run1Z03()'>
+                    <td>RUSS 1Z03</td>
+                    <td>Intro to Russian</td>
+                </tr>
+                <tr id='classrow' onclick='run4HC3()'>
+                    <td>SFWR 4HC3</td>
+                    <td>Human Computer Interfaces</td>
+                </tr>
+                <tr id='classrow' onclick='run4E03()'>
+                    <td>SFWR 4E03</td>
+                    <td>Software Stats and Simulation</td>
+                </tr>
+                <tr id='classrow' onclick='run3Y03()'>
+                    <td>MATH 3Y03</td>
+                    <td>Statistics</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- 4e03 tab -->
+    <div id='panels' class="col-sm-4 text-left">
+        <div id='screen4E03' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading">Selected course: 4E03</div>
+                <div class="panel-body">
+                    4 Units
+                    <hr class="slimHR">
+                    <p>Hard and soft real-time systems. Safety classification. Fail-safe design, hazard analysis. Discrete event systems. Modes. Requirements and design specifications. Tasks and scheduling. Clock synchronization. Data acquisition. Applications in real-time control.
+                            Three lectures, one lab (three hours); first term</p>
+                    <form>
+                        
+                        <div class="form-group">
+                            <label for="coreSelection">Select Core</label>
+                            <select class="form-control" id="selectCore">
+                            <option>CO1 Mo,Thurs,Fri,3:30pm</option>
+                            <option>C02 Mo,Tues,Weds,1:30</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tutorialSelection">Select Core</label>
+                            <select class="form-control" id="selectTutorial">
+                                <option>T01 Friday,4:20</option>
+                                <option>T02 Friday,4:20</option>
+                                <option>T03 Friday,4:20</option>
+                                <option>T04 Friday,4:20</option>
+                                <option>T05 Friday,4:20</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="labSelection">Select Core</label>
+                            <select class="form-control" id="selectLab">
+                                <option>L01 Tuesday,Time</option>
+                                <option>L02 Tuesday,Time</option>
+                                <option>L03 Tuesday,Time</option>
+                            </select>
+                            </div>
+                        </form>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1z03 tab -->
+    <div class="col-sm-4 text-left">
+        <div id='screen1Z03' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Selected course: RUSS 1Z03</b></div>
+                <div class="panel-body">
+                    3 Units
+                    <hr>
+                    <p>
+                        <b>Description:</b> <br>
+                        This course is designed for students with no prior knowledge of Russian. Students will learn the Cyrillic alphabet, some basic rules of pronunciation and the essentials of Russian grammar. The sequel to this course is RUSSIAN 1ZZ3.
+                       <br> Three hours; one term
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Antirequisite(s):</b> Grade 12 U or M equivalent
+                        <br>
+                        <i>Not open to students with credit in RUSSIAN 1ZZ3. The Department reserves the right to place students in the course most appropriate to their abilities.</i> 
+                    </p>
+                    <hr>
+                    <b>C01: </b>N. Alimuradov
+                    <br> <br>
+                    <p><b>Lecture </b>10:30 - 11:20 Mon,Weds,Fri</p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3y03 tab -->
+    <div class="col-sm-4 text-left">
+        <div id='screen3Y03' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Selected course: STATS 3Y03</b></div>
+                <div class="panel-body">
+                    4 Units
+                    <hr>
+                    <p>
+                        <b>Description:</b> <br>
+                        Introduction to probability, data analysis, statistical inference, regression, correlation and analysis of variance, applications to civil and environmental engineering. 
+
+                       <br> Three lectures; one term
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Prerequisite(s):</b> Registration in Level II or above of any program in Engineering. <br>
+                        <b>Antirequisite(s):</b> ENGINEER 3JR4, STATS 3N03, STATS 3Y03
+                        <br>
+                    </p>
+                    <hr>
+
+                    <b>C01: </b>M. Thomas
+                    <br> <br>
+                    <p><b>Lecture </b>12:30 - 1:20 Mon,Tues,Thurs</p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4aa4 tab -->
+    <div class="col-sm-4 text-left">
+        <div id='screen4AA4' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Selected course: SFWR 4AA4</b></div>
+                <div class="panel-body">
+                    4 Units
+                    <hr>
+                    <p>
+                        <b>Description:</b> <br>
+                        Hard and soft real-time systems. Safety classification. Fail-safe design, hazard analysis. Discrete event systems. Modes. Requirements and design specifications. Tasks and scheduling. Clock synchronization. Data acquisition. Applications in real-time control.
+                       <br> Three lectures; first term
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Prerequisite(s):</b>  SFWRENG 3BB4 or 3SH3; and 3DX3 or 3DX4
+                        <br>
+                        <b>Antirequisite(s):</b> MECHTRON 4AA4, SFWRENG 4A03, 4AA3, 4GA3
+                        <br>
+                        <b>Cross-list(s):</b> MECHTRON 4AA4
+                        <br>
+                        
+                    </p>
+                    <hr>
+                    <b>C01: </b>W. He
+                    <br> <br>
+                    <p><b>Lecture </b>12:30 - 1:20 Mon,Tues,Thurs</p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4hc3 tab -->
+    <div class="col-sm-4 text-left">
+        <div id='screen4HC3' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Selected course: SFWR 4HC3</b></div>
+                <div class="panel-body">
+                    3 Units
+                    <hr>
+                    <p>
+                        <b>Description:</b> <br>
+                        Design of user interfaces. Principles of good interface design. Human input. Displaying complex data using graphics and virtual reality. Modes and mode awareness problem. Health issues, information overload. Special purpose graphics hardware. Interface design tools; on-line help systems.
+                       <br> Three lectures; first term
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Prerequisite(s):</b>  COMPSCI 3MH3 or 3SH3
+                        <br>
+                        <b>Antirequisite(s):</b> SFWRENG 4D03, 4HC3 
+                        <br>
+                        <b>Cross-list(s):</b> SFWRENG 4HC3 
+                        <br>
+                        
+                    </p>
+                    <hr>
+                    <b>C01: </b>A. Lenarcic
+                    <br> <br>
+                    <p><b>Lecture </b>11:30 - 12:20 Mon,Weds,Fri</p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>McMaster University</p>
+</footer>
+
+<script>
+  $(function(){
+      $("#includedContent").load("calendar/index.html"); 
+    });
+</script>
+
+</body>
+</html>
