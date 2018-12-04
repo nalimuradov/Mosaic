@@ -425,6 +425,13 @@ a {
       margin-bottom: 0%;
   }
 
+  hr {
+    padding: 5px;
+    margin: 10px;
+  }
+
+
+
 
 
 .week .event-name,
