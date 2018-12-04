@@ -1,2 +1,0 @@
-# Mosaic
-mcmaster mosaic UI
