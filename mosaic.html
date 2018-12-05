@@ -515,7 +515,9 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='swapBtn' onclick='swapBtn()' type="button" class="btn btn-primary">Swap</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                                Swap
+                        </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
                     </div>
                 </div>
@@ -543,7 +545,9 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='swapBtn' onclick='swapBtn()' type="button" class="btn btn-primary">Swap</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                                Swap
+                        </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
                     </div>
                 </div>
@@ -572,7 +576,9 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='swapBtn' onclick='swapBtn()' type="button" class="btn btn-primary">Swap</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                                Swap
+                        </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
                     </div>
                 </div>
@@ -601,7 +607,9 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='swapBtn' onclick='swapBtn()' type="button" class="btn btn-primary">Swap</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                            Swap
+                          </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
                     </div>
                 </div>
@@ -651,6 +659,85 @@
       $("#includedContent").load("calendar/index.html"); 
     });
 </script>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="swapModal" tabindex="-1" role="dialog" aria-labelledby="swapModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLongTitle">Swap a course</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="search-box">
+                      <div class="row">
+                          <div class="col-md-3">
+                              <h5>Search for Course</h5>
+                          </div>
+                          <div class="col-md-9">
+                              <input type="text" id="swapInput" class="form-control" placeholder="Search all fields e.g. HTML">
+                              <script>
+                                  $(document).ready(function () {
+                                      $("#swapInput").on("keyup", function () {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#swapTable tr").filter(function () {
+                                              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                      });
+                                  });
+                              </script>
+                          </div> 
+                      </div>
+                  </div>
+                  <div class="search-list">
+                      <h3>5 Courses found for your program</h3>
+                      <table class="table" id="swapTable">
+                          <thead>
+                              <tr>
+                                  <th>Course Code</th>
+                                  <th>Course Name</th>
+                              </tr>
+                          </thead>
+                          <tbody> 
+                          
+                          <tr id='classrow' onclick='swap4AA4()'>
+                              <td>SFWR 4AA4</td>
+                              <td>Real Time Operating Systems</td>
+                          </tr>
+                          <tr id='classrow' onclick='swap1Z03()'>
+                              <td>RUSS 1Z03</td>
+                              <td>Intro to Russian</td>
+                          </tr>
+                          <tr id='classrow' onclick='swap4HC3()'>
+                              <td>SFWR 4HC3</td>
+                              <td>Human Computer Interfaces</td>
+                          </tr>
+                          <tr id='classrow' onclick='swap4E03()'>
+                              <td>SFWR 4E03</td>
+                              <td>Software Stats and Simulation</td>
+                          </tr>
+                          <tr id='classrow' onclick='swap3Y03()'>
+                              <td>MATH 3Y03</td>
+                              <td>Statistics</td>
+                          </tr>
+                          </tbody>
+                      </table>
+          
+                  </div>
+              </div>
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-success">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

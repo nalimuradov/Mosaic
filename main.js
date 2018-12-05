@@ -204,6 +204,15 @@ function openEnrolled1Z03(){
 	screenHome.style.display = 'none';
 }
 
+<<<<<<< HEAD
+///////////////// Teos Code
+
+
+
+
+
+//////////////////
+=======
 // 
 
 function dropBtn(){
@@ -227,3 +236,4 @@ function dropBtn(){
 }
 
 
+>>>>>>> 6add02cc53abbcdf960797883f5e59947a701fe9
