@@ -262,7 +262,7 @@
             </div>
         </div>
         <div class="search-list">
-            <h3>5 Courses found for your program</h3>
+            <h3>Courses Available for Enrolment</h3>
             <table class="table" id="myTable">
                 <thead>
                     <tr>
@@ -272,24 +272,24 @@
                 </thead>
                 <tbody> 
                 
-                <tr id='classrow' onclick='run4AA4()'>
+                <tr class="tr4AA4" id='classrow' onclick='run4AA4()'>
                     <td>SFWR 4AA4</td>
                     <td>Real Time Operating Systems</td>
                 </tr>
-                <tr id='classrow' onclick='run1Z03()'>
+                <tr class="tr1Z03" id='classrow' onclick='run1Z03()'>
                     <td>RUSS 1Z03</td>
                     <td>Intro to Russian</td>
                 </tr>
-                <tr id='classrow' onclick='run4HC3()'>
+                <tr class="tr4HC3" id='classrow' onclick='run4HC3()'>
                     <td>SFWR 4HC3</td>
                     <td>Human Computer Interfaces</td>
                 </tr>
-                <tr id='classrow' onclick='run4E03()'>
-                    <td>SFWR 4E03</td>
-                    <td>Software Stats and Simulation</td>
+                <tr class="tr4E03" id='classrow' onclick='run4E03()'>
+                    <td>COMP SCI 4E03</td>
+                    <td>Software Statistics and Simulation</td>
                 </tr>
-                <tr id='classrow' onclick='run3Y03()'>
-                    <td>MATH 3Y03</td>
+                <tr class="tr3Y03" id='classrow' onclick='run3Y03()'>
+                    <td>STATS 3Y03</td>
                     <td>Statistics</td>
                 </tr>
                 </tbody>
@@ -610,6 +610,35 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
                             Swap
                           </button>
+                        <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 4E03 enrolled tab SAMPLE -->
+    <div class="col-sm-4 text-left">
+        <div id='enrolled4E03' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Edit selected course: SFWR 4HC3</b></div>
+                <div class="panel-body">
+                    3 Units
+                    <hr>
+                    <b>C01: </b>A. Lenarcic 
+                    <hr>
+                    <p><b>Weekly schedule: </b> 
+                        <br>
+                        Lectures
+                        <br>
+                        Mon 11:30am - 12:20pm <br>Weds 11:30am - 12:20pm <br>Fri 11:30am - 12:20pm
+                    </p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button id='swapBtn' onclick='swapBtn()' type="button" class="btn btn-primary">Swap</button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
                     </div>
                 </div>
