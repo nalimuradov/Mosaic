@@ -81,6 +81,14 @@ jQuery(document).ready(function($){
 	var enrolled3Y03 = document.getElementById('enrolled3Y03');
 	var enrolled1Z03 = document.getElementById('enrolled1Z03');
 	var enrolled4E03 = document.getElementById('enrolled4E03');
+
+/*
+	var tr4AA4 = document.getElementsByClassName('tr4AA4');
+	var tr4HC3 = document.getElementsByClassName('tr4HC3');
+	var tr3Y03 = document.getElementsByClassName('tr3Y03');
+	var tr1Z03 = document.getElementsByClassName('tr1Z03');
+	var tr4E03 = document.getElementsByClassName('tr4E03');
+	*/
 });
 
 var courseID = '';
@@ -131,9 +139,11 @@ function cancelBtn(){
 
 function enrollBtn(){
 	var course = document.getElementsByClassName('course' + courseID);
+	var tr = document.getElementsByClassName('tr' + courseID);
 	for (i = 0; i < course.length; i++){
 		course[i].style.visibility = 'visible';
 	}
+	tr[0].style.visibility = 'hidden';
 	screenHome.style.display = 'unset';
 	screen4E03.style.display = 'none';
 	screen4HC3.style.display = 'none';
@@ -145,27 +155,55 @@ function enrollBtn(){
 //
 
 function openEnrolled4AA4(){
+	courseID = '4AA4';
 	enrolled4AA4.style.display = 'unset';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled3Y03(){
+	courseID = '3Y03';
 	enrolled3Y03.style.display = 'unset';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled4E03(){
+	courseID = '4E03';
 	enrolled4E03.style.display = 'unset';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled4HC3(){
+	courseID = '4HC3';
 	enrolled4HC3.style.display = 'unset';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled1Z03(){
+	courseID = '1Z03';
 	enrolled1Z03.style.display = 'unset';
 	screenHome.style.display = 'none';
 }
+
+// 
+
+function dropBtn(){
+	var course = document.getElementsByClassName('course' + courseID);
+	var tr = document.getElementsByClassName('tr' + courseID);
+	for (i = 0; i < course.length; i++){
+		course[i].style.visibility = 'hidden';
+	}
+	tr[0].style.visibility = 'visible';
+	screenHome.style.display = 'unset';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
+	enrolled4AA4.style.display = 'none';
+	enrolled4HC3.style.display = 'none';
+	enrolled1Z03.style.display = 'none';
+	enrolled3Y03.style.display = 'none';
+	enrolled4E03.style.display = 'none';
+}
+
 
