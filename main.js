@@ -48,8 +48,39 @@ jQuery(document).ready(function($){
 	var screen3Y03 = document.getElementById('screen3Y03');
 	var screen1Z03 = document.getElementById('screen1Z03');
 	var screen4AA4 = document.getElementById('screen4AA4');
-	console.log(screen4AA4);
 
+	var course4AA4 = document.getElementsByClassName('course4AA4');
+	var course4E03 = document.getElementsByClassName('course4E03');
+	var course4HC3 = document.getElementsByClassName('course4HC3');
+	var course3Y03 = document.getElementsByClassName('course3Y03');
+	var course1Z03 = document.getElementsByClassName('course1Z03');
+
+
+	for (i = 0; i < course4AA4.length; i++){
+		course4AA4[i].addEventListener('click', openEnrolled4AA4, false);
+	}
+
+	for (i = 0; i < course4E03.length; i++){
+		course4E03[i].addEventListener('click', openEnrolled4E03, false);
+	}
+
+	for (i = 0; i < course4HC3.length; i++){
+		course4HC3[i].addEventListener('click', openEnrolled4HC3, false);
+	}
+
+	for (i = 0; i < course3Y03.length; i++){
+		course3Y03[i].addEventListener('click', openEnrolled3Y03, false);
+	}
+
+	for (i = 0; i < course1Z03.length; i++){
+		course1Z03[i].addEventListener('click', openEnrolled1Z03, false);
+	}
+
+	var enrolled4AA4 = document.getElementById('enrolled4AA4');
+	var enrolled4HC3 = document.getElementById('enrolled4HC3');
+	var enrolled3Y03 = document.getElementById('enrolled3Y03');
+	var enrolled1Z03 = document.getElementById('enrolled1Z03');
+	var enrolled4E03 = document.getElementById('enrolled4E03');
 });
 
 var courseID = '';
@@ -91,6 +122,11 @@ function cancelBtn(){
 	screen3Y03.style.display = 'none';
 	screen1Z03.style.display = 'none';
 	screen4AA4.style.display = 'none';
+	enrolled4AA4.style.display = 'none';
+	enrolled4HC3.style.display = 'none';
+	enrolled1Z03.style.display = 'none';
+	enrolled3Y03.style.display = 'none';
+	enrolled4E03.style.display = 'none';
 }
 
 function enrollBtn(){
@@ -105,3 +141,31 @@ function enrollBtn(){
 	screen1Z03.style.display = 'none';
 	screen4AA4.style.display = 'none';
 }
+
+//
+
+function openEnrolled4AA4(){
+	enrolled4AA4.style.display = 'unset';
+	screenHome.style.display = 'none';
+}
+
+function openEnrolled3Y03(){
+	enrolled3Y03.style.display = 'unset';
+	screenHome.style.display = 'none';
+}
+
+function openEnrolled4E03(){
+	enrolled4E03.style.display = 'unset';
+	screenHome.style.display = 'none';
+}
+
+function openEnrolled4HC3(){
+	enrolled4HC3.style.display = 'unset';
+	screenHome.style.display = 'none';
+}
+
+function openEnrolled1Z03(){
+	enrolled1Z03.style.display = 'unset';
+	screenHome.style.display = 'none';
+}
+

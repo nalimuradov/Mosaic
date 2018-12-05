@@ -454,3 +454,7 @@ a {
   visibility: hidden;
 }
 
+#enrolled4AA4, #enrolled3Y03, #enrolled1Z03, #enrolled4HC3 {
+  display: none;
+}
+
