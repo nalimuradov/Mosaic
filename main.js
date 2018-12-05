@@ -157,30 +157,50 @@ function enrollBtn(){
 function openEnrolled4AA4(){
 	courseID = '4AA4';
 	enrolled4AA4.style.display = 'unset';
+	enrolled1Z03.style.display = 'none';
+	enrolled4HC3.style.display = 'none';
+	enrolled4E03.style.display = 'none';
+	enrolled3Y03.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled3Y03(){
 	courseID = '3Y03';
 	enrolled3Y03.style.display = 'unset';
+	enrolled1Z03.style.display = 'none';
+	enrolled4HC3.style.display = 'none';
+	enrolled4E03.style.display = 'none';
+	enrolled4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled4E03(){
 	courseID = '4E03';
 	enrolled4E03.style.display = 'unset';
+	enrolled1Z03.style.display = 'none';
+	enrolled4HC3.style.display = 'none';
+	enrolled3Y03.style.display = 'none';
+	enrolled4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled4HC3(){
 	courseID = '4HC3';
 	enrolled4HC3.style.display = 'unset';
+	enrolled1Z03.style.display = 'none';
+	enrolled4E03.style.display = 'none';
+	enrolled3Y03.style.display = 'none';
+	enrolled4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
 function openEnrolled1Z03(){
 	courseID = '1Z03';
 	enrolled1Z03.style.display = 'unset';
+	enrolled4HC3.style.display = 'none';
+	enrolled4E03.style.display = 'none';
+	enrolled3Y03.style.display = 'none';
+	enrolled4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
