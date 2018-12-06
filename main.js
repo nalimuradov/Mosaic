@@ -271,3 +271,4 @@ function openSwap(){
 	courseToSwap = course;
 	console.log(courseToSwap);
 }
+
