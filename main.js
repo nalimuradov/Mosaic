@@ -268,7 +268,6 @@ function confirmSwap(){
 }
 
 function openSwap(){
-	courseToSwap = course;
-	console.log(courseToSwap);
+	// when swap modal is opened
 }
 
