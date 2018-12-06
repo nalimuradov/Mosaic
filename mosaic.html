@@ -231,6 +231,11 @@
                     <em class="event-name">4HC3</em>
                   </a>
                 </li>
+                <li class="single-event course4E03" data-start="13:30" data-end="16:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4E03</em>
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -262,7 +267,7 @@
             </div>
         </div>
         <div class="search-list">
-            <h3>5 Courses found for your program</h3>
+            <h3>Courses Available for Enrolment</h3>
             <table class="table" id="myTable">
                 <thead>
                     <tr>
@@ -270,26 +275,26 @@
                         <th>Course Name</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody> 
                 
-                <tr id='classrow' onclick='run4AA4()'>
+                <tr class="tr4AA4" id='classrow' onclick='run4AA4()'>
                     <td>SFWR 4AA4</td>
                     <td>Real Time Operating Systems</td>
                 </tr>
-                <tr id='classrow' onclick='run1Z03()'>
+                <tr class="tr1Z03" id='classrow' onclick='run1Z03()'>
                     <td>RUSS 1Z03</td>
                     <td>Intro to Russian</td>
                 </tr>
-                <tr id='classrow' onclick='run4HC3()'>
+                <tr class="tr4HC3" id='classrow' onclick='run4HC3()'>
                     <td>SFWR 4HC3</td>
                     <td>Human Computer Interfaces</td>
                 </tr>
-                <tr id='classrow' onclick='run4E03()'>
-                    <td>SFWR 4E03</td>
-                    <td>Software Stats and Simulation</td>
+                <tr class="tr4E03" id='classrow' onclick='run4E03()'>
+                    <td>COMP SCI 4E03</td>
+                    <td>Software Statistics and Simulation</td>
                 </tr>
-                <tr id='classrow' onclick='run3Y03()'>
-                    <td>MATH 3Y03</td>
+                <tr class="tr3Y03" id='classrow' onclick='run3Y03()'>
+                    <td>STATS 3Y03</td>
                     <td>Statistics</td>
                 </tr>
                 </tbody>
@@ -303,45 +308,46 @@
     <div id='panels' class="col-sm-4 text-left">
         <div id='screen4E03' class="container-fluid">
             <div class="panel panel-default">
-                <div class="panel-heading">Selected course: 4E03</div>
+                <div class="panel-heading">Selected course: SFWR 4E03</div>
                 <div class="panel-body">
-                    4 Units
-                    <hr class="slimHR">
-                    <p>Hard and soft real-time systems. Safety classification. Fail-safe design, hazard analysis. Discrete event systems. Modes. Requirements and design specifications. Tasks and scheduling. Clock synchronization. Data acquisition. Applications in real-time control.
-                            Three lectures, one lab (three hours); first term</p>
+                        <p>
+                                <b>Description:</b> <br>
+                                Use of queuing models and simulation to predict computer system performance and find bottlenecks in a system. Types of models, distributions. Markov models. Modelling storage and network behaviour, locks, critical sections, concurrency. Introduction to analytical system reliability.
+                               <br> Three lectures, one lab (three hours); first term
+                            </p>
+                            <hr>
+                            <p>
+                                <b>Prerequisite(s):</b> STATS 3Y03 or registration in STATS 3Y03 in the same term
+                                <br>
+                                <b>Antirequisite(s):</b> COMPSCI 4E03
+                                <br>
+                                <b>Cross-list(s):</b> COMPSCI 4E03
+                                <br>
+                                
+                            </p>
+                            <hr>
+                            <b>C01: </b>J. Douglas
+                            <br> <br>
                     <form>
-                        
                         <div class="form-group">
                             <label for="coreSelection">Select Core</label>
                             <select class="form-control" id="selectCore">
-                            <option>CO1 Mo,Thurs,Fri,3:30pm</option>
-                            <option>C02 Mo,Tues,Weds,1:30</option>
+                            <option>C01: 8:30am - 9:30am Weds,Fri </option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="tutorialSelection">Select Core</label>
-                            <select class="form-control" id="selectTutorial">
-                                <option>T01 Friday,4:20</option>
-                                <option>T02 Friday,4:20</option>
-                                <option>T03 Friday,4:20</option>
-                                <option>T04 Friday,4:20</option>
-                                <option>T05 Friday,4:20</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="labSelection">Select Core</label>
+                            <label for="labSelection">Select Lab</label>
                             <select class="form-control" id="selectLab">
-                                <option>L01 Tuesday,Time</option>
-                                <option>L02 Tuesday,Time</option>
-                                <option>L03 Tuesday,Time</option>
+                                <option>L01: 1:30pm - 4:30 Friday</option>
+                                <option>L02: 1:30pm - 4:30 Mon</option>
                             </select>
                             </div>
                         </form>
                 </div>
-                <div class="panel-footer">
+                <div class="panel-footer">  
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                        <button id='enrollBtn' onclick='enroll4E03()' type="button" class="btn btn-success">Enroll</button>
                     </div>
                 </div>
             </div>
@@ -370,7 +376,7 @@
                     <hr>
                     <b>C01: </b>N. Alimuradov
                     <br> <br>
-                    <p><b>Lecture </b>10:30 - 11:20 Mon,Weds,Fri</p>
+                    <p><b>Lecture </b>10:30am - 11:30am Mon,Weds,Fri</p>
                 </div>
                 <div class="panel-footer">
                     <div class="text-right">
@@ -406,7 +412,7 @@
 
                     <b>C01: </b>M. Thomas
                     <br> <br>
-                    <p><b>Lecture </b>12:30 - 1:20 Mon,Tues,Thurs</p>
+                    <p><b>Lecture </b>12:30pm - 1:30pm Mon,Tues,Thurs</p>
                 </div>
                 <div class="panel-footer">
                     <div class="text-right">
@@ -444,7 +450,7 @@
                     <hr>
                     <b>C01: </b>W. He
                     <br> <br>
-                    <p><b>Lecture </b>12:30 - 1:20 Mon,Tues,Thurs</p>
+                    <p><b>Lecture </b>9:30am - 10:30am Mon,Tues,Thurs</p>
                 </div>
                 <div class="panel-footer">
                     <div class="text-right">
@@ -467,7 +473,7 @@
                     <p>
                         <b>Description:</b> <br>
                         Design of user interfaces. Principles of good interface design. Human input. Displaying complex data using graphics and virtual reality. Modes and mode awareness problem. Health issues, information overload. Special purpose graphics hardware. Interface design tools; on-line help systems.
-                       <br> Three lectures; first term
+                       <br> Three lectures; one lab (three hours) first term
                     </p>
                     <hr>
                     <p>
@@ -482,18 +488,183 @@
                     <hr>
                     <b>C01: </b>A. Lenarcic
                     <br> <br>
-                    <p><b>Lecture </b>11:30 - 12:20 Mon,Weds,Fri</p>
+                    <p><b>Lecture </b>11:30am - 12:30pm Mon,Weds,Fri</p>
+                    <br><br>
+                    <p><b>Lab </b>1:30pm - 3:30pm Mon,Weds,Fri</p>
                 </div>
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                        <button id='enrollBtn' onclick='enroll4HC3()' type="button" class="btn btn-success">Enroll</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <!-- 4aa4 enrolled tab -->
+    <div class="col-sm-4 text-left">
+        <div id="enrolled4AA4" class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Selected course: SFWR 4AA4</b></div>
+                <div class="panel-body">
+                    4 Units
+                    <hr>
+                    <b>Professor: </b>W. He
+                    <hr>
+                    <p><b>Weekly schedule: </b> 
+                        <br>
+                        Lectures
+                        <br>
+                        Mon 12:30am - 1:30pm <br>Tues 12:30am - 1:30pm <br>Thurs 12:30am - 1:30pm
+                    </p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button onclick='openSwap("4AA4")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                                Swap
+                        </button>
+                        <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- 1z03 enrolled tab -->
+    <div class="col-sm-4 text-left">
+        <div id='enrolled1Z03' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Edit selected course: RUSS 1Z03</b></div>
+                <div class="panel-body">
+                    3 Units
+                    <hr>
+                    <b>Professor: </b>N. Alimuradov
+                    <hr>
+                    <p><b>Weekly schedule: </b> 
+                        <br>
+                        Lectures
+                        <br>
+                        Mon 10:30am - 11:30am <br>Weds 10:30am - 11:30am <br>Fri 10:30am - 11:30am
+                    </p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button onclick='openSwap("1Z03")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                                Swap
+                        </button>
+                        <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3y03 enrolled tab  -->
+    <div class="col-sm-4 text-left">
+        <div id='enrolled3Y03' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Edit selected course: MATH 3Y03</b></div>
+                <div class="panel-body">
+                    4 Units
+                    <hr>
+                    <b>Professor: </b>M. Thomas
+                    <hr>
+                    <p><b>Weekly schedule: </b> 
+                        <br>
+                        Lectures
+                        <br>
+                        Mon 12:30am - 1:30pm <br>Tues 12:30am - 1:30pm <br>Thurs 12:30am - 1:30pm
+                    </p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button onclick='openSwap("3Y03")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                                Swap
+                        </button>
+                        <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- 4HC3 enrolled tab -->
+    <div class="col-sm-4 text-left">
+        <div id='enrolled4HC3' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Edit selected course: SFWR 4HC3</b></div>
+                <div class="panel-body">
+                    3 Units
+                    <hr>
+                    <b>Professor: </b>A. Lenarcic 
+                    <hr>
+                    <p><b>Weekly schedule: </b> 
+                        <br>
+                        Lectures
+                        <br>
+                        Mon 11:30am - 12:30pm <br>Weds 11:30am - 12:30pm <br>Fri 11:30am - 12:30pm
+                    </p>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button onclick='openSwap("4HC3")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                            Swap
+                          </button>
+                        <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 4E03 enrolled tab -->
+    <div class="col-sm-4 text-left">
+        <div id='enrolled4E03' class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Edit selected course: SFWR 4E03</b></div>
+                <div class="panel-body">
+                    3 Units
+                    <hr>
+                    <b>Professor: </b>J. Douglas
+                    <hr>
+                    <form>
+                            <div class="form-group">
+                                <label for="coreSelection">Edit Core</label>
+                                <select class="form-control" id="selectCore">
+                                <option>C01: 8:30am - 9:30am Weds,Fri </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="labSelection">Edit Lab</label>
+                                <select class="form-control" id="selectLab2">
+                                    <option>L01: 1:30pm - 4:30 Friday</option>
+                                    <option>L02: 1:30pm - 4:30 Mon</option>
+                                </select>
+                                </div>
+                            </form>
+                </div>
+                <div class="panel-footer">
+                    <div class="text-right">
+                        <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
+                        <button onclick='openSwap("4E03")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                                Swap
+                        </button>
+                        <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
+                        <button id='enrollBtn' onclick='saveEditBtn()' type="button" class="btn btn-success">Save edits</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
   </div>
@@ -508,6 +679,69 @@
       $("#includedContent").load("calendar/index.html"); 
     });
 </script>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="swapModal" tabindex="-1" role="dialog" aria-labelledby="swapModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLongTitle">Swap a course</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="search-box">
+                      <div class="row">
+                          <div class="col-md-3">
+                              <h5>Search for Course</h5>
+                          </div>
+                          <div class="col-md-9">
+                              <input type="text" id="swapInput" class="form-control" placeholder="Search all fields e.g. HTML">
+                              <script>
+                                  $(document).ready(function () {
+                                      $("#swapInput").on("keyup", function () {
+                                          var value = $(this).val().toLowerCase();
+                                          $("#swapTable tr").filter(function () {
+                                              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                          });
+                                      });
+                                  });
+                              </script>
+                          </div> 
+                      </div>
+                  </div>
+                  <div class="search-list">
+                      <h3>Courses Available for Swap</h3>
+                      <table class="table" id="swapTable">
+                          <thead>
+                              <tr>
+                                  <th>Course Code</th>
+                                  <th>Course Name</th>
+                              </tr>
+                          </thead>
+                          <tbody> 
+                          
+                          <tr class='swap4AA4Row tr4AA4' id='classrow' onclick='swap4AA4()'>
+                              <td>SFWR 4AA4</td>
+                              <td>Real Time Operating Systems</td>
+                          </tr>
+                          </tbody>
+                      </table>
+          
+                  </div>
+              </div>
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-success confirmSwap" data-dismiss="modal" onclick='confirmSwap()'>Confirm Swap</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
