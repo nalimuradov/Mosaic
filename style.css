@@ -457,3 +457,13 @@ a {
 #enrolled4AA4, #enrolled3Y03, #enrolled1Z03, #enrolled4HC3, #enrolled4E03 {
   display: none;
 }
+
+.selectedSwap {
+  background-color: #55AE3A;
+}
+
+.selectedSwap:active {
+  background-color: #55AE3A;
+}
+
+

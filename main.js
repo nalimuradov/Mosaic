@@ -143,7 +143,9 @@ function enrollBtn(){
 	for (i = 0; i < course.length; i++){
 		course[i].style.visibility = 'visible';
 	}
-	tr[0].style.visibility = 'hidden';
+	for (i = 0; i < tr.length; i++){
+		tr[i].style.visibility = 'collapse';
+	}
 	screenHome.style.display = 'unset';
 	screen4E03.style.display = 'none';
 	screen4HC3.style.display = 'none';
@@ -161,6 +163,11 @@ function openEnrolled4AA4(){
 	enrolled4HC3.style.display = 'none';
 	enrolled4E03.style.display = 'none';
 	enrolled3Y03.style.display = 'none';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
@@ -171,6 +178,11 @@ function openEnrolled3Y03(){
 	enrolled4HC3.style.display = 'none';
 	enrolled4E03.style.display = 'none';
 	enrolled4AA4.style.display = 'none';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
@@ -181,6 +193,11 @@ function openEnrolled4E03(){
 	enrolled4HC3.style.display = 'none';
 	enrolled3Y03.style.display = 'none';
 	enrolled4AA4.style.display = 'none';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
@@ -191,6 +208,11 @@ function openEnrolled4HC3(){
 	enrolled4E03.style.display = 'none';
 	enrolled3Y03.style.display = 'none';
 	enrolled4AA4.style.display = 'none';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
 
@@ -201,19 +223,13 @@ function openEnrolled1Z03(){
 	enrolled4E03.style.display = 'none';
 	enrolled3Y03.style.display = 'none';
 	enrolled4AA4.style.display = 'none';
+	screen4E03.style.display = 'none';
+	screen4HC3.style.display = 'none';
+	screen3Y03.style.display = 'none';
+	screen1Z03.style.display = 'none';
+	screen4AA4.style.display = 'none';
 	screenHome.style.display = 'none';
 }
-
-<<<<<<< HEAD
-///////////////// Teos Code
-
-
-
-
-
-//////////////////
-=======
-// 
 
 function dropBtn(){
 	var course = document.getElementsByClassName('course' + courseID);
@@ -221,7 +237,9 @@ function dropBtn(){
 	for (i = 0; i < course.length; i++){
 		course[i].style.visibility = 'hidden';
 	}
-	tr[0].style.visibility = 'visible';
+	for (i = 0; i < tr.length; i++){
+		tr[i].style.visibility = 'visible';
+	}
 	screenHome.style.display = 'unset';
 	screen4E03.style.display = 'none';
 	screen4HC3.style.display = 'none';
@@ -235,5 +253,21 @@ function dropBtn(){
 	enrolled4E03.style.display = 'none';
 }
 
+//
 
->>>>>>> 6add02cc53abbcdf960797883f5e59947a701fe9
+courseToSwap = '';
+
+function swap(course){
+	var selected = document.getElementsByClassName('swap' + course + 'Row');
+	console.log(selected);
+}
+
+function confirmSwap(){
+	var selected = document.getElementsByClassName('selectedSwap');
+	console.log(selected);
+}
+
+function openSwap(){
+	courseToSwap = course;
+	console.log(courseToSwap);
+}
