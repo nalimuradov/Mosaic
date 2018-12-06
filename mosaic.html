@@ -308,7 +308,7 @@
                         <p>
                                 <b>Description:</b> <br>
                                 Use of queuing models and simulation to predict computer system performance and find bottlenecks in a system. Types of models, distributions. Markov models. Modelling storage and network behaviour, locks, critical sections, concurrency. Introduction to analytical system reliability.
-                               <br> Three lectures, one tutorial (one hour), one lab (three hours); first term
+                               <br> Three lectures, one lab (three hours); first term
                             </p>
                             <hr>
                             <p>
@@ -328,14 +328,6 @@
                             <label for="coreSelection">Select Core</label>
                             <select class="form-control" id="selectCore">
                             <option>C01: 8:30am - 9:30am Weds,Fri </option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="tutorialSelection">Select Tutorial</label>
-                            <select class="form-control" id="selectTutorial">
-                                <option>T01: 2:30pm - 3:30pm Tues</option>
-                                <option>T02: 2:30pm - 3:30pm Weds</option>
-                                <option>T03: 2:30pm - 3:30pm Thurs</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -647,14 +639,6 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="tutorialSelection">Edit Tutorial</label>
-                                <select class="form-control" id="selectTutorial">
-                                    <option>T01: 2:30pm - 3:30pm Tues</option>
-                                    <option>T02: 2:30pm - 3:30pm Weds</option>
-                                    <option>T03: 2:30pm - 3:30pm Thurs</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
                                 <label for="labSelection">Edit Lab</label>
                                 <select class="form-control" id="selectLab">
                                     <option>L01: 1:30pm - 4:30 Mon</option>
@@ -668,6 +652,7 @@
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
                         <button id='swapBtn' onclick='swapBtn()' type="button" class="btn btn-primary">Swap</button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
+                        <button id='enrollBtn' onclick='saveEditBtn()' type="button" class="btn btn-success">Save edits</button>
                     </div>
                 </div>
             </div>
