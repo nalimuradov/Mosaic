@@ -231,6 +231,11 @@
                     <em class="event-name">4HC3</em>
                   </a>
                 </li>
+                <li class="single-event course4E03" data-start="13:30" data-end="16:30" data-event="event-1">
+                  <a href="#0">
+                    <em class="event-name">4E03</em>
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -333,16 +338,16 @@
                         <div class="form-group">
                             <label for="labSelection">Select Lab</label>
                             <select class="form-control" id="selectLab">
-                                <option>L01: 1:30pm - 4:30 Mon</option>
-                                <option>L02: 1:30pm - 4:30 Friday</option>
+                                <option>L01: 1:30pm - 4:30 Friday</option>
+                                <option>L02: 1:30pm - 4:30 Mon</option>
                             </select>
                             </div>
                         </form>
                 </div>
-                <div class="panel-footer">
+                <div class="panel-footer">  
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                        <button id='enrollBtn' onclick='enroll4E03()' type="button" class="btn btn-success">Enroll</button>
                     </div>
                 </div>
             </div>
@@ -490,7 +495,7 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button id='enrollBtn' onclick='enrollBtn()' type="button" class="btn btn-success">Enroll</button>
+                        <button id='enrollBtn' onclick='enroll4HC3()' type="button" class="btn btn-success">Enroll</button>
                     </div>
                 </div>
             </div>
@@ -518,7 +523,7 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button onclick='openSwap()' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                        <button onclick='openSwap("4AA4")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
                                 Swap
                         </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
@@ -548,7 +553,7 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button onclick='openSwap()' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                        <button onclick='openSwap("1Z03")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
                                 Swap
                         </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
@@ -579,7 +584,7 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button onclick='openSwap()' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                        <button onclick='openSwap("3Y03")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
                                 Swap
                         </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
@@ -610,7 +615,7 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button onclick='openSwap()' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                        <button onclick='openSwap("4HC3")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
                             Swap
                           </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
@@ -621,11 +626,11 @@
     </div>
 
 
-    <!-- 4E03 enrolled tab SAMPLE -->
+    <!-- 4E03 enrolled tab -->
     <div class="col-sm-4 text-left">
         <div id='enrolled4E03' class="container-fluid">
             <div class="panel panel-default">
-                <div class="panel-heading"><b>Edit selected course: SFWR 4HC3</b></div>
+                <div class="panel-heading"><b>Edit selected course: SFWR 4E03</b></div>
                 <div class="panel-body">
                     3 Units
                     <hr>
@@ -640,9 +645,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="labSelection">Edit Lab</label>
-                                <select class="form-control" id="selectLab">
-                                    <option>L01: 1:30pm - 4:30 Mon</option>
-                                    <option>L02: 1:30pm - 4:30 Friday</option>
+                                <select class="form-control" id="selectLab2">
+                                    <option>L01: 1:30pm - 4:30 Friday</option>
+                                    <option>L02: 1:30pm - 4:30 Mon</option>
                                 </select>
                                 </div>
                             </form>
@@ -650,7 +655,7 @@
                 <div class="panel-footer">
                     <div class="text-right">
                         <button id='cancelBtn' onclick='cancelBtn()' type="button" class="btn btn-default">Cancel</button>
-                        <button onclick='openSwap()' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
+                        <button onclick='openSwap("4E03")' type="button" class="btn btn-primary" data-toggle="modal" data-target="#swapModal">
                                 Swap
                         </button>
                         <button id='dropBtn' onclick='dropBtn()' type="button" class="btn btn-danger">Drop</button>
@@ -719,7 +724,7 @@
                           </thead>
                           <tbody> 
                           
-                          <tr class='swap4AA4Row tr4AA4' id='classrow' onclick='swap("4AA4")'>
+                          <tr class='swap4AA4Row tr4AA4' id='classrow' onclick='swap4AA4()'>
                               <td>SFWR 4AA4</td>
                               <td>Real Time Operating Systems</td>
                           </tr>
@@ -732,7 +737,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-success confirmSwap" onclick='confirmSwap()'>Confirm Swap</button>
+          <button type="button" class="btn btn-success confirmSwap" data-dismiss="modal" onclick='confirmSwap()'>Confirm Swap</button>
         </div>
       </div>
     </div>

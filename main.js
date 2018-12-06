@@ -82,13 +82,14 @@ jQuery(document).ready(function($){
 	var enrolled1Z03 = document.getElementById('enrolled1Z03');
 	var enrolled4E03 = document.getElementById('enrolled4E03');
 
-/*
+	/*
 	var tr4AA4 = document.getElementsByClassName('tr4AA4');
 	var tr4HC3 = document.getElementsByClassName('tr4HC3');
 	var tr3Y03 = document.getElementsByClassName('tr3Y03');
 	var tr1Z03 = document.getElementsByClassName('tr1Z03');
 	var tr4E03 = document.getElementsByClassName('tr4E03');
 	*/
+
 });
 
 var courseID = '';
@@ -152,6 +153,77 @@ function enrollBtn(){
 	screen3Y03.style.display = 'none';
 	screen1Z03.style.display = 'none';
 	screen4AA4.style.display = 'none';
+}
+
+var conflict4HC3 = false;
+var conflict4E03 = false;
+
+function enroll4E03(){
+	// specifically for 4E03 as it has two lab choices
+	var course = document.getElementsByClassName('course4E03');
+	var tr = document.getElementsByClassName('tr4E03');
+
+	var lab = document.getElementById('selectLab');
+	var labData = lab.options[lab.selectedIndex].value;
+
+	if (labData == "L01: 1:30pm - 4:30 Friday" && conflict4HC3 == true){
+		// write the error here and let them know
+		alert('Course Conflict: 4E03 conflicts with 4HC3 on Friday at 1:30');
+	} else {
+
+		if (labData == "L01: 1:30pm - 4:30 Friday"){
+			course[1].style.visibility = 'visible';
+			course[2].style.visibility = 'visible';
+			course[3].style.visibility = 'visible';
+			conflict4E03 = true;
+		} else if (labData == "L02: 1:30pm - 4:30 Mon"){
+			course[0].style.visibility = 'visible';
+			course[1].style.visibility = 'visible';
+			course[2].style.visibility = 'visible';
+			conflict4E03 = false;
+		}
+
+		for (i = 0; i < tr.length; i++){
+			tr[i].style.visibility = 'collapse';
+		}
+		screenHome.style.display = 'unset';
+		screen4E03.style.display = 'none';
+		screen4HC3.style.display = 'none';
+		screen3Y03.style.display = 'none';
+		screen1Z03.style.display = 'none';
+		screen4AA4.style.display = 'none';
+	}
+}
+
+function enroll4HC3(){
+	// specifically for 4HC3 due to conflict
+	var course = document.getElementsByClassName('course4HC3');
+	var tr = document.getElementsByClassName('tr4HC3');
+
+	if (conflict4E03 == true){
+		// write the error here and let them know
+		alert('Course Conflict: 4HC3 conflicts with 4E03 on Friday at 1:30');
+	} else {
+
+		conflict4HC3 = true;
+
+		for(i = 0; i < course.length; i++){
+			course[i].style.visibility = 'visible';
+		}
+		
+
+		for (i = 0; i < tr.length; i++){
+			tr[i].style.visibility = 'collapse';
+		}
+		screenHome.style.display = 'unset';
+		screen4E03.style.display = 'none';
+		screen4HC3.style.display = 'none';
+		screen3Y03.style.display = 'none';
+		screen1Z03.style.display = 'none';
+		screen4AA4.style.display = 'none';
+	}
+
+	
 }
 
 //
@@ -233,6 +305,14 @@ function openEnrolled1Z03(){
 
 function dropBtn(){
 	var course = document.getElementsByClassName('course' + courseID);
+
+	if (courseID == "4HC3"){
+		conflict4HC3 = false;
+
+	} else if (courseID == "4E03"){
+		conflict4E03 = false;
+	} 
+
 	var tr = document.getElementsByClassName('tr' + courseID);
 	for (i = 0; i < course.length; i++){
 		course[i].style.visibility = 'hidden';
@@ -253,21 +333,111 @@ function dropBtn(){
 	enrolled4E03.style.display = 'none';
 }
 
+
 //
 
-courseToSwap = '';
+courseID = '';
 
-function swap(course){
-	var selected = document.getElementsByClassName('swap' + course + 'Row');
-	console.log(selected);
+function swap4AA4(){
+
+	// when 4aa4 is clicked
+	var selected = document.getElementsByClassName('swap4AA4Row')[0];
+	var confirmBtn = document.getElementsByClassName('confirmSwap')[0];
+
+	if (selected.classList.contains('selectedSwap')){
+		selected.classList.remove('selectedSwap');
+		// hide confirm button
+		confirmBtn.style.display = 'none';
+	} else {
+		selected.classList.add('selectedSwap');
+		// show confirm button
+		confirmBtn.style.display = 'unset';
+	}
 }
 
 function confirmSwap(){
 	var selected = document.getElementsByClassName('selectedSwap');
-	console.log(selected);
+	var course = document.getElementsByClassName('course4AA4');
+	for (i = 0; i < course.length; i++){
+		course[i].style.visibility = 'visible';
+	}
+	var confirmBtn = document.getElementsByClassName('confirmSwap')[0];
+	var selected = document.getElementsByClassName('swap4AA4Row')[0];
+	var tr = document.getElementsByClassName('tr4AA4');
+	for (i = 0; i < tr.length; i++){
+		tr[i].style.visibility = 'collapse';
+	}
+	confirmBtn.style.display = 'none';
+
+	selected.classList.remove('selectedSwap');
+	
+
+
+	// remove
+	var courseRem = document.getElementsByClassName('course' + courseID);
+	for (i = 0; i < courseRem.length; i++){
+		courseRem[i].style.visibility = 'hidden';
+	}
+		
+	var trAdd = document.getElementsByClassName('tr' + courseID);
+	for (i = 0; i < trAdd.length; i++){
+		trAdd[i].style.visibility = 'visible';
+	}
+
+	
+
+
+
+
+	enrolled4AA4.style.display = 'none';
+	enrolled4HC3.style.display = 'none';
+	enrolled1Z03.style.display = 'none';
+	enrolled3Y03.style.display = 'none';
+	enrolled4E03.style.display = 'none';
+	screenHome.style.display = 'unset';
 }
 
-function openSwap(){
+function openSwap(course){
 	// when swap modal is opened
+	courseID = course;
 }
 
+function saveEditBtn(){
+	var course = document.getElementsByClassName('course4E03');
+
+	var lab = document.getElementById('selectLab2');
+	var labData = lab.options[lab.selectedIndex].value;
+
+	if (labData == "L01: 1:30pm - 4:30 Friday" && conflict4HC3 == true){
+		// write the error here and let them know
+		alert('Course Conflict: 4E03 conflicts with 4HC3 on Friday at 1:30');
+	} else {
+
+		if (labData == "L01: 1:30pm - 4:30 Friday"){
+			course[0].style.visibility = 'hidden';
+			course[1].style.visibility = 'visible';
+			course[2].style.visibility = 'visible';
+			course[3].style.visibility = 'visible';
+			conflict4E03 = true;
+		} else if (labData == "L02: 1:30pm - 4:30 Mon"){
+			course[0].style.visibility = 'visible';
+			course[1].style.visibility = 'visible';
+			course[2].style.visibility = 'visible';
+			course[3].style.visibility = 'hidden';
+			conflict4E03 = false;
+		}
+
+		screenHome.style.display = 'unset';
+		screen4E03.style.display = 'none';
+		screen4HC3.style.display = 'none';
+		screen3Y03.style.display = 'none';
+		screen1Z03.style.display = 'none';
+		screen4AA4.style.display = 'none';
+		enrolled4AA4.style.display = 'none';
+		enrolled4HC3.style.display = 'none';
+		enrolled1Z03.style.display = 'none';
+		enrolled3Y03.style.display = 'none';
+		enrolled4E03.style.display = 'none';
+	}
+	
+}

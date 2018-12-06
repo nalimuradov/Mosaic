@@ -462,8 +462,8 @@ a {
   background-color: #55AE3A;
 }
 
-.selectedSwap:active {
-  background-color: #55AE3A;
+.confirmSwap {
+  display: none;
 }
 
 
