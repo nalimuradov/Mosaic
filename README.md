@@ -9,7 +9,7 @@ How to use:
  - Click on a course in the list to the right.
  - Clicking on enroll will add it to your weekly schedule displayed to the left.
  - Click on the course in your weekly schedule to see the course info.
- - Here, you can also drop the course or swap into another course.
+ - In the course info, you can drop the course or swap into another course.
 
 Important Notes:
  - You can only swap into SFWR 4AA4 therefore if you are currently enrolled in it, no swap options will be available to you.
