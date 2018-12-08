@@ -13,7 +13,7 @@ How to use:
 
 Important Notes:
  - You can only swap into SFWR 4AA4 therefore if you are currently enrolled in it, no swap options will be available to you.
- - The course SFWR 4HC3 can conflict with the friday COMP SCI 4E03 lab. This is to demonstrate how our system handles course conflicts.
+ - The SFWR 4HC3 course can conflict with the friday COMP SCI 4E03 lab. This is to demonstrate how our system handles course conflicts.
 
 
 
